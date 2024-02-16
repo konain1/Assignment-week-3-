@@ -13,7 +13,7 @@ async function userMiddleware(req, res, next) {
         let userExist = await User.findOne({ username });
         // const existingAdmin = await Admin.findOne({ username });
 
-
+        console.log(userExist)
         if (userExist) {
             if (userExist.password == password) {
                 next();
